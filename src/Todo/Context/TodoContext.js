@@ -1,10 +1,20 @@
-import React, { createContext, useReducer, useContext } from "react"
+import React, { createContext, useReducer, useContext, useEffect } from "react"
 import { initialState, reducer } from "./TodoReducer"
+import useLocalStorage from "../hooks/useLocalStorage"
 
 const TodoContext = createContext(initialState)
 
 const TodoProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState)
+  const [saved, setSaved] = useLocalStorage("todo", initialState)
+
+
+  useEffect(()=>{
+    
+  },[])
+  useEffect(() => {
+    setSaved(state)
+  }, [state])
 
   const addTodo = (text) => {
     dispatch({ type: "ADD_TODO", payload: text })
