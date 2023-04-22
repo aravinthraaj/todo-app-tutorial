@@ -1,7 +1,8 @@
 import React from "react"
-import { AddTask, TaskList } from "./Components"
+import AddTask from "./Components/AddTask"
+import TaskList from "./Components/TaskList"
 
-function Todo() {
+const Todo = () => {
   return (
     <>
       <AddTask />

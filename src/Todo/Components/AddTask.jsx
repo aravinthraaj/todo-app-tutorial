@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { handleKeyDown } from "../utils"
 import { useTodoContext } from "../Context/TodoContext"
 
-function AddTask() {
+const AddTask = ()=> {
   const [text, setText] = useState("")
   const { addTodo } = useTodoContext()
 

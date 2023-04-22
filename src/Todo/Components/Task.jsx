@@ -2,7 +2,7 @@ import React from "react"
 import { handleKeyDown } from "../utils"
 import { useTodoContext } from "../Context/TodoContext"
 
-function Task({ todo }) {
+const Task = ({ todo }) => {
   const {
     toggleCompletedTodo,
     toggleEditableTodo,
